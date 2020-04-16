@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title><%=title%></title>
+</head>
+<body >
+    
+    <%- include ('partials/nav.ejs'); -%>
+   
+   
+    
+
+    <div class="container my-5">
+        <fieldset style="border:1px solid teal;border-radius:4px;width:75%;margin:auto;">
+    <form action="/update/" id="my-form" name="myForm"  method="post">
+        <div class="form-group">
+
+        
+            <label for="username" class="col-md-3 contol-label" >&nbsp;</label>
+            <div class="col-md-9">
+            <input type="hidden" class="form-control" value="<%=records._id%>"  name="id" id="id" required>
+        </div>
+     <div class="form-group">
+
+        
+        <label for="username" class="col-md-3 contol-label" >Username:</label>
+        <div class="col-md-9">
+        <input class="form-control" placeholder="Full Name" value="<%=records.name%>" type="text" name="username" id="username" required>
+    </div>
+     </div>
+          
+      
+     <div class="form-group">
+        <label class="col-md-3 contol-label" for="email" >Email:</label>
+        <div class="col-md-12">
+        <input class="form-control" placeholder="email" value="<%=records.email%>" type="email" name="email" id="email" required>
+        </div>
+     </div>
+     <div class="form-group">
+        <label class="col-md-3 contol-label" for="email" >Phone:</label>
+        <div class="col-md-12">
+        <input class="form-control"  placeholder="phone" value="<%=records.phone%>" type="phone" name="phone" id="phone" required>
+        </div>
+     </div>
+        <div class="form-group">
+        <label class="col-md-3 control-label"for="password" >Password:</label>
+        <div class="col-md-12">
+        <input  class="form-control" placeholder="password"  value="<%=records.password%>" type="password" name="password" id="password"required><br>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <input class="btn btn-outline-primary"type="submit" value="Submit" name="submit" id="submit">
+       </div>
+    </form>
+ 
+</div>
+</fieldset>
+<%- include ('partials/footer.ejs'); -%>
+</body>
+</html>

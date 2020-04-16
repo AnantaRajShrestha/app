@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title><%=title%></title>
+</head>
+<body  >
+    
+    <%- include ('partials/nav.ejs'); -%>
+  
+    
+
+    <div class="container my-5">
+        <div class="panel panel-info">
+            <div class="panel-heading">  </div>
+            <div class="panel-body">
+                <fieldset style="border:1px solid teal;border-radius:4px;width:75%;margin:auto;">
+    <form id="my-form" name="myForm" action="/add-post" method="post" enctype="multipart/form-data">
+        <br>
+        
+       <div class="form-group">
+           <label for="title" class="col-md-3 contol-label">title:</label>
+                <div class="col-md-12">
+            <input class="form-control" placeholder="title" type="text" name="title" id="title" required>
+        </div>
+    </div>
+          
+      
+     <div class="form-group">
+           <label class="col-md-3 contol-label" for="content">Content:</label>
+                <div class="col-md-12">
+<textarea name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+     </div>
+     <div class="form-group">
+        <label class="col-md-3 contol-label" for="author">Author:</label>
+             <div class="col-md-12">
+                <input class="form-control" placeholder="author" type="text" name="author" id="author" required>
+     </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-3 contol-label" for="date">Date:</label>
+         <div class="col-md-12">
+            <input class="form-control"   name="date" id="date" value="<%= date%>" required>
+ </div>
+</div>
+         
+     <div class="form-group">
+        <label class="col-md-3 contol-label" for="file">Upload file:</label>
+             <div class="col-md-12">
+<input type="file" name="file" id="file">
+     </div>
+  </div>
+          
+            
+          
+             <div class="col-md-12">
+              <input  class="btn btn-primary"type="submit" value="Add" name="add" id="add">
+              </div>
+              <br><br>
+
+    
+    </form>
+ 
+
+
+</fieldset>
+</div>
+</div>
+</div>
+<%- include ('partials/footer.ejs'); -%>
+
+</body>
+</html>

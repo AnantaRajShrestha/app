@@ -1,0 +1,133 @@
+html
+{
+    scroll-behavior: smooth;
+}
+.my-navbar .navbar-inner .my-menu li a
+{
+    color:teal;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.gotopbtn
+{
+    text-decoration: none;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    bottom: 50px;
+    right:30px;
+    color:teal;
+    text-align: center;
+    background-color: black;
+    border-radius:4px;
+}
+p{
+    color:#999;
+    line-height: 25px;
+}
+h3{
+    color: teal;
+    font-size: 18px;
+}
+.footer-top
+{
+    background-color:#111;
+    padding:80px 0;
+}
+.segment-one h3
+{
+font-family: Courgette;
+color:#fff;
+letter-spacing: 2px;
+margin:10px;
+}
+.segment-two h3
+{
+    color:#fff;
+    
+    font-family: Courgette;
+}
+.segment-two h3:before{
+    content: '|';
+    color:#c65039;
+    padding-right: 10px;;
+}
+.segment-one h3:before{
+    content: '|';
+    color:#c65039;
+    padding-right: 10px;;
+}
+.segment-three h3:before{
+    content: '|';
+    color:#c65039;
+    padding-right: 10px;
+   
+}
+.segment-two ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.segment-two ul li{
+    border-bottom: 1px solid white;
+    line-height: 40px;
+}
+.segment-two ul li a{
+    color:teal;
+    text-decoration: none;
+}
+.segment-three h3
+{
+    font-family: Courgette;
+ 
+}
+.segment-three a{
+    background-color:#494848;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    text-decoration:none;
+
+}
+.segment-three a i{
+    font-size: 20px;
+    color:#fff;
+    padding:10px 12px;
+}
+.segment-four h3:before{
+    content: '|';
+    color:#c65039;
+    padding-right: 10px;
+
+}
+.segment-four form input[type=email]
+{
+  
+    border:none;
+    
+
+}
+.segment-four form input[type=submit]
+{
+    background-color: #c65039;
+    margin-left: 0px;
+    border:none;
+    color:#fff;
+   
+}
+.footer-bottom{
+    text-align: center;
+    background-color: #000;
+    line-height: 75px;
+    bottom: 0;
+}
+h3,h4{
+    color:teal;
+}

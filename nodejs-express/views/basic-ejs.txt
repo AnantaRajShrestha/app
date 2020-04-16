@@ -1,0 +1,7 @@
+         <%#,comment tag 
+         <%,no output
+         <%=,output the value into template
+         <%-,output the unscaped value into template
+          <!-- get method data display,<h2><%=qs.person%></h2> -->
+
+    

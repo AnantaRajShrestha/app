@@ -1,0 +1,34 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "I will not win immediately but definitely",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.9",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "session": "^0.1.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ananta raj shrestha",
+  "license": "MIT"
+}

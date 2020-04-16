@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title><%=title%></title>
+ 
+</head>
+<body >
+    
+    <%- include ('partials/nav.ejs'); -%>
+           
+  
+
+    <% if(success!==' ') {%>
+        <div class="alert alert-success"><strong>Success!</strong><%=success%></div>
+     <%}%>
+    
+   
+
+    <div class="container my-5">
+      
+     <div class="col-md-5">
+        <form action="/search2/" class="form-inline" method="post">
+     
+            
+                
+            <input style="width:50%;"type="text" class="form-control" name="title" id="title" placeholder="Type title here..">
+       
+    
+       
+     
+          <input type="submit" class="btn btn-primary" style="margin:2px;" value="Search" name="submit" id="submit">
+    
+    
+    </form>
+</div>
+    <br><br>
+
+
+    <form id="my-form" name="myForm" action="/upload"  method="post" enctype='multipart/form-data'>
+     <div class="form-group">
+        <label for="file" class="col-md-3 contol-label" required>Upload File:</label>
+        <div class="col-md-9">
+         <input class="form-control" type="file" name="file" id="file">
+    </div>
+     </div>
+     <div class="form-group">
+        <label for="name" class="col-md-3 contol-label" required>Uploaded By:</label>
+        <div class="col-md-9">
+         <input  class="form-control"type="text" name="name" id="name">
+    </div>
+     </div>
+     <div class="form-group">
+        <label for="title" class="col-md-3 contol-label" required>Title:</label>
+        <div class="col-md-9">
+         <input  type="text" class="form-control" name="title" id="title">
+    </div>
+     </div>
+   
+     <div class="form-group">
+        <label for="time" class="col-md-3 contol-label" required>Uploaded At:</label>
+        <div class="col-md-9">
+         <input type="text" class="form-control" name="date" id="date" value="<%=date%>">
+    </div>
+     </div>
+          
+     <div class="col-md-3">
+     
+        <input class="btn btn-outline-primary"type="submit" value="Submit" name="submit" id="submit">
+     </div>
+    </form>
+ 
+</div>
+<div class="container my-3">
+    <div class="row">
+<% if(records.length>0) {%>
+    <% records.forEach(function(row){%>
+      
+    <div  style="margin:5px auto;"class="col-md-5" class="card card-default">
+        <div class="card-header"><%=row.title%></div>
+        <div class="card-body">  <div > <h3><%=row.imagename%></h3></div></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-3">By:<%=row.uploadedBy%></div>
+                <div class="col-2">Pub. At:<%=row.date%></div>
+                <div class="col-3"><a href="/assets/img/<%=row.imagename%>">Preview<i class="fa fa-eye"></i></a></div>
+                <div class="col"> <a href="/assets/img/<%=row.imagename%>" download>Download<i class="fa fa-arrow-down"></i></a></div>
+            </div> </div>
+    </div>
+ 
+      
+      
+      
+     
+   
+    <%})}else{%>
+        <h3>No record Found</h3>
+        <%}%>
+    </div>
+</div>
+<br><br>
+</div>
+
+<%- include ('partials/footer.ejs'); -%>
+</body>
+</html>
